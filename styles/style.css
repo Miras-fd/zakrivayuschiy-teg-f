@@ -1,5 +1,5 @@
 .page {
-  min-inline-size: 375px;
+  inline-size: 100%;
   min-block-size: 100vh;
   margin: 0;
   background-image: var(--page-background);
@@ -14,7 +14,9 @@
   display: flex;
   justify-content: center;
   padding-top: 100px;
+  padding-right: 20px;
   padding-bottom: 100px;
+  padding-left: 20px;
 }
 
 .header__content {
@@ -22,7 +24,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  inline-size: 700px;
+  inline-size: 100%;
+  max-inline-size: 700px;
   min-block-size: 368px;
   border: 2px solid var(--accent-color);
   background-color: var(--bg-color);
@@ -48,18 +51,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-right: 20px;
   padding-bottom: 100px;
+  padding-left: 20px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: 52px;
-  inline-size: 700px;
+  gap: 48px;
+  inline-size: 100%;
+  max-inline-size: 700px;
 }
 
 .card {
-  inline-size: 700px;
+  inline-size: 100%;
   border: 2px solid var(--accent-color);
   background-color: var(--bg-color);
 }
@@ -132,7 +138,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 6px;
+  gap: 12px;
   padding: 0 25px 25px;
 }
 
@@ -166,6 +172,7 @@
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 90%;
+  text-transform: uppercase;
 }
 
 .card__icon-button {
@@ -195,9 +202,11 @@
 }
 
 .like-icon {
-  inline-size: 39px;
-  block-size: 36px;
+  display: block;
+  inline-size: 27px;
+  block-size: 24px;
   transform-origin: center;
+  margin:auto;
 }
 
 .like-icon .contour {
@@ -270,26 +279,29 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  inline-size: 335px;
+  inline-size: 100%;
+  max-inline-size: 335px;
   block-size: 55px;
   margin-top: 52px;
-  padding: 15px 20px;
+  padding: 0;
 }
 
 .save-button__icon {
   position: relative;
   z-index: 1;
+  display: block;
   inline-size: 21px;
   block-size: 21px;
-  color: var(--bg-color);
-  mix-blend-mode: difference;
+  flex-shrink: 0;
 }
 
 .dialog {
-  inline-size: 353px;
+  inline-size: 100%;
+  max-inline-size: 353px;
   padding: 30px;
   border: 2px solid var(--accent-color);
   background-color: var(--bg-color);
+  box-sizing: border-box;
 }
 
 .dialog::backdrop {
@@ -370,6 +382,11 @@
 }
 
 @media (width <= 375px) {
+  .header {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .header__content {
     inline-size: 100%;
     max-inline-size: 375px;
@@ -383,6 +400,11 @@
 
   .header__title {
     font-size: 14px;
+  }
+
+  .main {
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .content {
@@ -405,19 +427,21 @@
 
   .save-button {
     flex-direction: column;
-    inline-size: 306px;
+    inline-size: 100%;
+    max-inline-size: 306px;
     block-size: 84px;
-  }
-
-  .save-button__icon {
-  inline-size: 21px;
-  block-size: 21px;
-  color: var(--accent-color);
-  flex-shrink: 0;
 }
 
+  .save-button__icon {
+    inline-size: 28px;
+    block-size: 28px;
+    flex-shrink: 0;
+  }
+
   .dialog {
-    inline-size: 341px;
+    inline-size: 100%;
+    max-inline-size: 341px;
     padding: 30px 40px;
+    box-sizing: border-box;
   }
 }
