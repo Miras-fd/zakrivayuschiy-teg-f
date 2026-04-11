@@ -34,7 +34,7 @@
 .header__logo {
   margin: 0 0 20px;
   font-family: var(--accent-font);
-  font-size: 65px;
+  font-size: clamp(49px, 30.54px + 4.92vw, 65px);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -42,7 +42,7 @@
 .header__title {
   margin: 0;
   font-family: var(--accent-font);
-  font-size: 23px;
+  font-size: clamp(14px, 3.62px + 2.77vw, 23px);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -87,7 +87,8 @@
 .card__image {
   display: block;
   inline-size: 100%;
-  block-size: 696px;
+  block-size: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
 }
@@ -395,14 +396,6 @@
     min-block-size: 327px;
   }
 
-  .header__logo {
-    font-size: 49px;
-  }
-
-  .header__title {
-    font-size: 14px;
-  }
-
   .main {
     padding-right: 0;
     padding-left: 0;
@@ -415,10 +408,6 @@
   .card {
     inline-size: 100%;
     min-block-size: auto;
-  }
-
-  .card__image {
-    block-size: 375px;
   }
 
   .card__label {
