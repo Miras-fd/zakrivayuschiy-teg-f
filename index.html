@@ -483,18 +483,22 @@
       </section>
 
       <button class="save-button button" type="button" id="save-button">
-        <img src="./svg/floppy.svg" alt="" class="save-button__icon" />
+        <svg class="save-button__icon" aria-hidden="true">
+          <use href="./svg/floppy.svg#floppy-icon"></use>
+        </svg>
         <span class="button__text">Сохранить на память</span>
-      </button>
+</button>
     </main>
 
     <dialog class="dialog" id="save-dialog">
       <div class="dialog__content">
-        <img src="./svg/floppy.svg" alt="" class="dialog__icon" />
+        <svg class="dialog__icon" aria-hidden="true">
+          <use href="./svg/floppy.svg#floppy-icon"></use>
+        </svg>
         <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
       </div>
       <button class="dialog__button button" type="button">
-        <span class="button__text">ок</span>
+        <span class="button__text">ok</span>
       </button>
     </dialog>
 

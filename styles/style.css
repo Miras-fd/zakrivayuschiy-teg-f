@@ -172,7 +172,6 @@
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 90%;
-  text-transform: uppercase;
 }
 
 .card__icon-button {
@@ -203,8 +202,8 @@
 
 .like-icon {
   display: block;
-  inline-size: 27px;
-  block-size: 24px;
+  inline-size: 39px;
+  block-size: 36px;
   transform-origin: center;
   margin:auto;
 }
@@ -289,10 +288,11 @@
 .save-button__icon {
   position: relative;
   z-index: 1;
-  display: block;
   inline-size: 21px;
   block-size: 21px;
   flex-shrink: 0;
+  color: var(--bg-color);
+  mix-blend-mode: difference;
 }
 
 .dialog {
@@ -338,6 +338,7 @@
 .dialog__button {
   min-block-size: 38px;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .card__image-filter-sepia {
